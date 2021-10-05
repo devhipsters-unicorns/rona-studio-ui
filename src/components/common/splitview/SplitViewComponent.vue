@@ -26,6 +26,11 @@ interface iState {
   clone: HTMLElement | undefined
 }
 import { reactive, ref, Ref } from 'vue'
+import {
+  TvoidFunction,
+  TvoidFunctionEvent,
+  TfunctionHtml,
+} from '../../../types'
 
 const splitView: Ref = ref(HTMLElement)
 const leftView: Ref = ref(HTMLElement)
@@ -39,9 +44,7 @@ const state: iState = reactive({
   clone: undefined,
 })
 
-const styleClone: (clone: HTMLElement) => Promise<HTMLElement> = async (
-  clone: HTMLElement,
-) => {
+const styleClone: TfunctionHtml = async (clone: HTMLElement) => {
   requestAnimationFrame(() => {
     clone.style.setProperty('--height', `${state.rects?.height}px`)
     clone.style.setProperty('--width', `${state.rects?.width}px`)
@@ -53,15 +56,14 @@ const styleClone: (clone: HTMLElement) => Promise<HTMLElement> = async (
   return clone
 }
 
-const cloneHandler: (target: HTMLElement) => Promise<HTMLElement> = async (
-  target: HTMLElement,
-) => {
+const cloneHandler: TfunctionHtml = async (target: HTMLElement) => {
   let clone: any = target.cloneNode(true)
   clone.classList.add('clone')
   clone = styleClone(clone)
   return clone
 }
-const mouseDownHandler: (event: any) => Promise<void> = async (event: any) => {
+
+const mouseDownHandler: TvoidFunctionEvent = async (event: any) => {
   const target = event.target.classList.contains('drag-handle')
     ? event.target
     : event.target.closest('.drag-handle')
@@ -74,7 +76,7 @@ const mouseDownHandler: (event: any) => Promise<void> = async (event: any) => {
   leftView.value.append(state.clone)
 }
 
-const mouseMoveHandler: (event: any) => Promise<void> = async (event: any) => {
+const mouseMoveHandler: TvoidFunctionEvent = async (event: any) => {
   event.preventDefault()
   if (!state.dragStarted && !state.clone) {
     return
@@ -90,7 +92,7 @@ const mouseMoveHandler: (event: any) => Promise<void> = async (event: any) => {
   })
 }
 
-const mouseUpHandler = async (event: any) => {
+const mouseUpHandler: TvoidFunctionEvent = async (event: any) => {
   if (!state.dragStarted) {
     return
   }
@@ -99,7 +101,7 @@ const mouseUpHandler = async (event: any) => {
   await removeClone()
 }
 
-const setSplitViewPanleWidth = async (event: any) => {
+const setSplitViewPanleWidth: TvoidFunctionEvent = async (event: any) => {
   const dx = event.clientX - Number(state.startXpos)
   const newLeftWidth =
     ((leftView.value.getBoundingClientRect().width + dx) * 100) /
@@ -107,7 +109,7 @@ const setSplitViewPanleWidth = async (event: any) => {
   leftView.value.style.setProperty('--default-width', `${newLeftWidth}%`)
 }
 
-const removeClone = async () => {
+const removeClone: TvoidFunction = async () => {
   const clone = leftView.value.querySelector('.clone')
   leftView.value.removeChild(clone)
   delete state.clone
