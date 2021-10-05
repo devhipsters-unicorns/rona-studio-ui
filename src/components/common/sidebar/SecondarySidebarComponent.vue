@@ -1,5 +1,7 @@
 <template>
-  <div>projects component</div>
+  <div>
+    sencondary sidebar
+  </div>
 </template>
 
 <script setup lang="ts"></script>

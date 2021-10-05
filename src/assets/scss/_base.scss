@@ -17,6 +17,6 @@ body {
   font-size: 14px;
   font-family: 'Oxygen-Sans', Segoe UI, Roboto, Helvetica Neue, Helvetica, Arial,
     sans-serif;
-  color: $grey-800;
-  background-color: $base-bg;
+  color: var(--primary-text);
+  background-color: var(--base-bg);
 }

@@ -6,3 +6,5 @@
 <script setup lang="ts">
 import HeaderComponentVue from './components/common/header/HeaderComponent.vue'
 </script>
+
+<style lang="scss"></style>
