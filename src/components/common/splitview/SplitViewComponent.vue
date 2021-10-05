@@ -98,7 +98,7 @@ const mouseUpHandler: TvoidFunctionEvent = async (event: any) => {
   }
   state.dragStarted = false
   await setSplitViewPanleWidth(event)
-  await removeClone()
+  if (state.clone) await removeClone()
 }
 
 const setSplitViewPanleWidth: TvoidFunctionEvent = async (event: any) => {
@@ -110,8 +110,12 @@ const setSplitViewPanleWidth: TvoidFunctionEvent = async (event: any) => {
 }
 
 const removeClone: TvoidFunction = async () => {
-  const clone = leftView.value.querySelector('.clone')
-  leftView.value.removeChild(clone)
+  const clones = leftView.value.querySelectorAll('.clone')
+  if (clones.length > 0) {
+    for (const clone of clones) {
+      leftView.value.removeChild(clone)
+    }
+  }
   delete state.clone
   delete state.startXpos
   delete state.rects
