@@ -77,12 +77,12 @@ const mouseUpHandler: TvoidFunctionEvent = async (event: any) => {
     bottom: 1rem;
     width: 1rem;
     right: -0.5rem;
-    border-radius: 0.3125rem;
+    border-radius: 0.5rem;
     background-color: transparentize($color, 0.7);
 
     .drag-handle {
       position: inherit;
-      right: 0.375rem;
+      right: 0.325rem;
       content: ' ';
       height: 1.5rem;
       border-radius: 0.1875rem;
