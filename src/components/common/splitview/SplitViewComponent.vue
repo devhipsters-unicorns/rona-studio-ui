@@ -111,10 +111,10 @@ const setSplitViewPanleWidth: TvoidFunctionEvent = async (event: any) => {
 
 const removeClone: TvoidFunction = async () => {
   const clones = leftView.value.querySelectorAll('.clone')
-  if (clones.length > 0) {
-    for (const clone of clones) {
-      leftView.value.removeChild(clone)
-    }
+  if (clones.length == 0) return
+
+  for (const clone of clones) {
+    leftView.value.removeChild(clone)
   }
   delete state.clone
   delete state.startXpos
