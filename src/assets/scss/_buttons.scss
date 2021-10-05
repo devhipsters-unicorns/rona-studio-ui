@@ -1,0 +1,77 @@
+.btn {
+  border: none !important;
+  font-size: 0.875rem;
+  font-weight: 500;
+  height: 2.25rem;
+  line-height: 2.25rem;
+  min-width: 88px;
+  padding: 0 0.5rem;
+  text-transform: uppercase;
+  border-radius: 0.25rem;
+  transition: all 0.3s ease-in-out;
+
+  &:focus,
+  &.focus {
+    outline: none !important;
+  }
+
+  &:active,
+  &.active {
+    box-shadow: none !important;
+  }
+
+  &[disabled],
+  &.disabled,
+  &:hover[disabled],
+  &:focus[disabled],
+  &:active[disabled] {
+    background: $grey-300-alpha !important;
+    color: $grey-400-alpha !important;
+
+    &.btn-flat {
+      background-color: transparent !important;
+    }
+  }
+
+  &.btn-compact {
+    padding: 0 8px;
+  }
+
+  &.btn-dense {
+    font-size: 13px;
+    height: 32px;
+    line-height: 32px;
+  }
+
+  &.btn-tall {
+    height: 40px;
+    line-height: 14px;
+  }
+
+  &.btn-auto {
+    min-width: 0;
+  }
+
+  &.btn-center {
+    display: block;
+    margin: 0 auto;
+  }
+
+  &.btn-flat {
+    background: transparent;
+    color: $grey-900;
+
+    &:hover {
+      background-color: $grey-300-alpha;
+    }
+
+    &.btn-primary,
+    &.btn-success {
+      color: $brand-success;
+
+      &:hover {
+        background-color: rgba($brand-success, 0.12);
+      }
+    }
+  }
+}

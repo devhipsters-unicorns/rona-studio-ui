@@ -1,8 +1,5 @@
 <template>
-  <div>Home</div>
-  <SplitViewComponent></SplitViewComponent>
+  <div class="page"></div>
 </template>
-<script setup lang="ts">
-import SplitViewComponent from '../common/splitview/SplitViewComponent.vue'
-</script>
+<script setup lang="ts"></script>
 <style lang=""></style>

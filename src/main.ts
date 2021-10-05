@@ -4,7 +4,6 @@ import router from './router'
 import store from './store'
 import emitter from './eventBus'
 
-import './assets/scss/index.scss'
 const app = createApp({
   setup() {
     provide('eventBus', emitter)

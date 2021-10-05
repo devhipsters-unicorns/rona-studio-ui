@@ -1,3 +1,22 @@
+:root {
+  --accent: rgba(82, 177, 51, 0.842);
+  --white: rgb(255, 255, 255);
+  --black: rgb(0, 0, 0);
+  --primary: rgb(26, 35, 70);
+  --highlight: rgb(242, 244, 254);
+  --light-highlight: rgb(156, 224, 131);
+  --primary-text: rgb(3, 27, 78);
+  --primary-fill: rgba(84, 88, 92, 0.884);
+  --secondary-text: rgb(194, 196, 199);
+  --base-bg: rgb(240, 241, 246);
+  --content-bg: rgba(226, 226, 226, 0.911);
+  --border: rgba(209, 206, 206, 0.863);
+  --alert-danger: rgb(255, 51, 102);
+  --alert-warning: rgb(255, 216, 3);
+  --alert-info: rgb(74, 144, 226);
+  --alert-success: rgb(124, 223, 124);
+}
+
 *,
 *::after,
 *::after {
@@ -19,4 +38,19 @@ body {
     sans-serif;
   color: var(--primary-text);
   background-color: var(--base-bg);
+}
+
+.card {
+  background: var(--white);
+  border-radius: 0.3125rem;
+  color: var(--secondary-text);
+
+  .card-header {
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+  }
 }

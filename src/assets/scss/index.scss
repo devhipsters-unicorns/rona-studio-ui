@@ -1,7 +1,7 @@
-@use './_colors';
-@use './_base';
-@use './_variables';
-@use './_breakpoints';
-@use './_shadow';
-@use './_typography';
-@use './_buttons';
+@import 'colors';
+@import 'base';
+@import 'variables';
+@import 'breakpoints';
+@import 'shadow';
+@import 'typography';
+@import 'buttons';

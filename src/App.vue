@@ -1,10 +1,35 @@
 <template>
-  <HeaderComponentVue></HeaderComponentVue>
-  <router-view></router-view>
+  <HeaderComponent />
+  <main id="app-main-content">
+    <SidebarComponent />
+    <router-view></router-view>
+  </main>
+  <CrudModalComponent />
 </template>
 
 <script setup lang="ts">
-import HeaderComponentVue from './components/common/header/HeaderComponent.vue'
+import HeaderComponent from './components/common/header/HeaderComponent.vue'
+import CrudModalComponent from './components/common/modals/CrudModalComponent.vue'
+import SidebarComponent from './components/common/sidebar/SidebarComponent.vue'
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+@import './assets/scss/index.scss';
+#app {
+  height: inherit;
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+
+  #app-main-content {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    .page {
+      padding: 0 $full-padding;
+      flex: 1;
+    }
+  }
+}
+</style>
