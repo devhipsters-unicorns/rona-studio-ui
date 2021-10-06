@@ -50,7 +50,8 @@ const mouseDownHandler: TvoidFunctionEvent = async (event: any) => {
 const mouseMoveHandler: TvoidFunctionEvent = async (event: any) => {
   event.preventDefault()
   if (!state.dragStarted) return
-  const newWidth: number = state.rects?.x + event.clientX + 4
+  const newWidth: number = state.rects?.x + event.clientX
+  if (newWidth <= 180) return
   window.requestAnimationFrame(() => {
     appSidebar.value?.style?.setProperty('--default-width', `${newWidth}px`)
   })
@@ -70,20 +71,20 @@ const mouseUpHandler: TvoidFunctionEvent = async (event: any) => {
   --default-width: 17.1875rem;
   $color: rgba(209, 206, 206, 0.863);
   position: relative;
-  padding: $full-padding;
+  padding: 1rem 1.25rem 1rem 1rem;
   width: var(--default-width);
 
   .drag-container {
     position: absolute;
     top: 0.5rem;
     bottom: 0.5rem;
-    width: 1.5rem;
-    right: -1rem;
+    width: 2rem;
+    right: -2rem;
     border-left: 0.125rem solid transparentize($color, 0.7);
 
     .drag-handle {
       position: inherit;
-      right: 1.275rem;
+      right: 1.785rem;
       content: ' ';
       height: 1.5rem;
       border-radius: 0.1875rem;

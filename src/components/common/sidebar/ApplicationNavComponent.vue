@@ -21,7 +21,7 @@ const state = reactive({
 </script>
 <style lang="scss">
 #application-nav {
-  margin-right: 1rem;
+  // margin-right: 1÷rem;
   a {
     display: flex;
     flex-direction: row;

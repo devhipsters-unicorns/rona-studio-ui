@@ -27,7 +27,7 @@ import SidebarComponent from './components/common/sidebar/SidebarComponent.vue'
     display: flex;
     flex-direction: row;
     .page {
-      padding: 0 $full-padding;
+      padding: 0 1.5rem;
       flex: 1;
     }
   }
