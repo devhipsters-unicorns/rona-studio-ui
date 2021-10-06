@@ -1,12 +1,12 @@
 <template>
-  <div class="page">
+  <div class="page flex flex-col">
     <h3>dashboard</h3>
     <dynamic-grid-component :dataset="state.data" />
   </div>
 </template>
 <script setup lang="ts">
 import { reactive } from 'vue'
-import DynamicGridComponent from '../common/dynamicGrid/DynamicGridComponents.vue'
+import DynamicGridComponent from '../common/dynamicGrid/DynamicGridComponent.vue'
 const state = reactive({
   data: [
     {
@@ -16,11 +16,6 @@ const state = reactive({
       status: 'new',
       created_at: '1900-10-06',
       updated_at: '1900-10-06',
-      owner: {
-        id: '10',
-        full_name: 'Sally Manchini',
-        company: 'Apple inc.',
-      },
     },
     {
       id: '2',
@@ -29,11 +24,6 @@ const state = reactive({
       status: 'open',
       created_at: '2021-10-06',
       updated_at: '2021-10-06',
-      owner: {
-        id: '1',
-        full_name: 'Barry Meiny',
-        company: 'Shuntyard',
-      },
     },
     {
       id: '3',
@@ -42,11 +32,6 @@ const state = reactive({
       status: 'inprogress',
       created_at: '2021-09-20',
       updated_at: '2021-10-03',
-      owner: {
-        id: '7',
-        full_name: 'Garry Simons',
-        company: 'Tres`Eme',
-      },
     },
   ],
 })

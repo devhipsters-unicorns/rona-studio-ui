@@ -51,8 +51,10 @@ body {
 
 .card {
   background: var(--white);
-  border-radius: 0.3125rem;
   color: var(--secondary-text);
+  &-rounded {
+    border-radius: 0.3125rem;
+  }
 
   .card-header {
     padding: 1rem;
@@ -63,7 +65,6 @@ body {
     border-bottom: 1px solid var(--border);
   }
 }
-
 .gradient-bg {
   background: rgb(255, 255, 255);
   background: linear-gradient(
@@ -72,5 +73,14 @@ body {
     rgba(117, 116, 116, 0.275) 35%,
     rgba(189, 189, 189, 0.875) 70%,
     rgba(255, 255, 255, 0) 100%
+  );
+}
+.gradient-bg-up {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0) 35%,
+    rgba(117, 116, 116, 0.275) 100%
   );
 }

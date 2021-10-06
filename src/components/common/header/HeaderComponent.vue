@@ -8,7 +8,6 @@
 
 <script setup lang="ts"></script>
 <style lang="scss">
-@import '../../../assets/scss/index.scss';
 #app-header {
   height: 4rem;
   margin-bottom: 0.5rem;

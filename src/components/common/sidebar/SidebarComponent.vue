@@ -66,7 +66,6 @@ const mouseUpHandler: TvoidFunctionEvent = async (event: any) => {
 </script>
 
 <style lang="scss">
-@import '../../../assets/scss/index.scss';
 #app-sidebar {
   --default-width: 17.1875rem;
   $color: rgba(209, 206, 206, 0.863);

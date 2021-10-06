@@ -14,7 +14,6 @@ import SidebarComponent from './components/common/sidebar/SidebarComponent.vue'
 </script>
 
 <style lang="scss">
-@import './assets/scss/index.scss';
 #app {
   height: inherit;
   width: inherit;
@@ -27,7 +26,7 @@ import SidebarComponent from './components/common/sidebar/SidebarComponent.vue'
     display: flex;
     flex-direction: row;
     .page {
-      padding: 0 1.5rem;
+      padding: 1rem 1.5rem;
       flex: 1;
     }
   }
