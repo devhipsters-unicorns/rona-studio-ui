@@ -4,13 +4,14 @@
   --black: rgb(0, 0, 0);
   --primary: rgb(26, 35, 70);
   --highlight: rgb(242, 244, 254);
-  --light-highlight: rgb(156, 224, 131);
+  --light-highlight: rgb(190, 230, 176);
   --primary-text: rgb(3, 27, 78);
   --primary-fill: rgba(84, 88, 92, 0.884);
   --secondary-text: rgb(194, 196, 199);
   --base-bg: rgb(240, 241, 246);
   --content-bg: rgba(226, 226, 226, 0.911);
-  --border: rgba(209, 206, 206, 0.863);
+  --border: rgba(223, 223, 223, 0.863);
+  --border-light: rgba(209, 206, 206, 0.163);
   --alert-danger: rgb(255, 51, 102);
   --alert-warning: rgb(255, 216, 3);
   --alert-info: rgb(74, 144, 226);
@@ -53,4 +54,15 @@ body {
     align-items: center;
     border-bottom: 1px solid var(--border);
   }
+}
+
+.gradient-bg {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(117, 116, 116, 0.275) 35%,
+    rgba(189, 189, 189, 0.875) 70%,
+    rgba(255, 255, 255, 0) 100%
+  );
 }

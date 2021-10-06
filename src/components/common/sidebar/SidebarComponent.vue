@@ -9,12 +9,14 @@
     <div class="drag-container">
       <span class="drag-handle"></span>
     </div>
+    <application-nav-component />
   </aside>
 </template>
 
 <script setup lang="ts">
 import { reactive, Ref, ref } from 'vue'
 import { TvoidFunction, TvoidFunctionEvent } from '../../../types'
+import ApplicationNavComponent from './ApplicationNavComponent.vue'
 
 interface iState {
   dragStarted: boolean | undefined
@@ -48,8 +50,8 @@ const mouseDownHandler: TvoidFunctionEvent = async (event: any) => {
 const mouseMoveHandler: TvoidFunctionEvent = async (event: any) => {
   event.preventDefault()
   if (!state.dragStarted) return
-  const newWidth: number = state.rects?.x + event.clientX
-  requestAnimationFrame(() => {
+  const newWidth: number = state.rects?.x + event.clientX + 4
+  window.requestAnimationFrame(() => {
     appSidebar.value?.style?.setProperty('--default-width', `${newWidth}px`)
   })
 }
@@ -73,16 +75,15 @@ const mouseUpHandler: TvoidFunctionEvent = async (event: any) => {
 
   .drag-container {
     position: absolute;
-    top: 1rem;
-    bottom: 1rem;
-    width: 1rem;
-    right: -0.5rem;
-    border-radius: 0.5rem;
-    background-color: transparentize($color, 0.7);
+    top: 0.5rem;
+    bottom: 0.5rem;
+    width: 1.5rem;
+    right: -1rem;
+    border-left: 0.125rem solid transparentize($color, 0.7);
 
     .drag-handle {
       position: inherit;
-      right: 0.325rem;
+      right: 1.275rem;
       content: ' ';
       height: 1.5rem;
       border-radius: 0.1875rem;
@@ -96,6 +97,7 @@ const mouseUpHandler: TvoidFunctionEvent = async (event: any) => {
 
     &:hover {
       cursor: ew-resize;
+      border-color: var(--light-highlight);
       .drag-handle {
         height: 3rem;
         background-color: var(--accent);

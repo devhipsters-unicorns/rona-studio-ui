@@ -1,11 +1,17 @@
 import VueRouter, { createRouter, createWebHistory } from 'vue-router'
-import Dashboard from '../components/dashboard/DashboardComponent.vue'
+import DashboardComponent from '../components/dashboard/DashboardComponent.vue'
+import MessagesComponent from '../components/messages/MessagesComponent.vue'
 
 const routes: Array<any> = [
   {
     path: '/',
-    name: 'home',
-    component: Dashboard,
+    name: 'dashboard',
+    component: DashboardComponent,
+  },
+  {
+    path: '/messaging',
+    name: 'messaging',
+    component: MessagesComponent,
   },
 ]
 
