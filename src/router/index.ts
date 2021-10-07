@@ -10,7 +10,7 @@ const routes: Array<any> = [
   },
   {
     path: '/messaging',
-    name: 'messaging',
+    name: 'messages',
     component: MessagesComponent,
   },
 ]

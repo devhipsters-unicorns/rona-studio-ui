@@ -1,6 +1,5 @@
 <template>
   <div class="page flex flex-col">
-    <h3>dashboard</h3>
     <dynamic-grid-component :dataset="state.data" />
   </div>
 </template>

@@ -4,7 +4,7 @@
       <vue-feather :type="state.icons.hex" size="16"></vue-feather>
       <span class="menu-item-text">Dashboard</span>
     </router-link>
-    <router-link :to="{ name: 'messaging' }">
+    <router-link :to="{ name: 'messages' }">
       <vue-feather :type="state.icons.msg" size="16"></vue-feather>
       <span class="menu-item-text">Messages</span>
     </router-link>
@@ -19,7 +19,7 @@ const state = reactive({
   },
 })
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 #application-nav {
   // margin-right: 1÷rem;
   a {

@@ -2,7 +2,10 @@
   <HeaderComponent />
   <main id="app-main-content">
     <SidebarComponent />
-    <router-view></router-view>
+    <div class="main-content-wrapper flex flex-col">
+      <toolbar-component />
+      <router-view></router-view>
+    </div>
   </main>
   <CrudModalComponent />
 </template>
@@ -11,6 +14,7 @@
 import HeaderComponent from './components/common/header/HeaderComponent.vue'
 import CrudModalComponent from './components/common/modals/CrudModalComponent.vue'
 import SidebarComponent from './components/common/sidebar/SidebarComponent.vue'
+import ToolbarComponent from './components/common/toolbar/ToolbarComponent.vue'
 </script>
 
 <style lang="scss">
@@ -25,9 +29,12 @@ import SidebarComponent from './components/common/sidebar/SidebarComponent.vue'
     overflow: hidden;
     display: flex;
     flex-direction: row;
-    .page {
+    .main-content-wrapper {
       padding: 1rem 1.5rem;
       flex: 1;
+      .page {
+        flex: 1;
+      }
     }
   }
 }

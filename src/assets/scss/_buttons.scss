@@ -1,77 +1,139 @@
 .btn {
-  border: none !important;
-  font-size: 0.875rem;
-  font-weight: 500;
-  height: 2.25rem;
-  line-height: 2.25rem;
-  min-width: 88px;
-  padding: 0 0.5rem;
+  border: none;
   text-transform: uppercase;
-  border-radius: 0.25rem;
-  transition: all 0.3s ease-in-out;
+  font-weight: bold;
+  color: var(--primary);
+  border-radius: 0.1875rem;
+  transition: all ease-in-out 0.3s;
+  background: transparent;
+  cursor: pointer;
 
-  &:focus,
-  &.focus {
-    outline: none !important;
-  }
+  &-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0;
 
-  &:active,
-  &.active {
-    box-shadow: none !important;
-  }
-
-  &[disabled],
-  &.disabled,
-  &:hover[disabled],
-  &:focus[disabled],
-  &:active[disabled] {
-    background: $grey-300-alpha !important;
-    color: $grey-400-alpha !important;
-
-    &.btn-flat {
-      background-color: transparent !important;
+    svg {
+      height: 1.5rem;
+      width: 1.5rem;
+      stroke: var(--primary);
     }
   }
 
-  &.btn-compact {
-    padding: 0 8px;
-  }
-
-  &.btn-dense {
-    font-size: 13px;
-    height: 32px;
-    line-height: 32px;
-  }
-
-  &.btn-tall {
-    height: 40px;
-    line-height: 14px;
-  }
-
-  &.btn-auto {
-    min-width: 0;
-  }
-
-  &.btn-center {
-    display: block;
-    margin: 0 auto;
-  }
-
-  &.btn-flat {
-    background: transparent;
-    color: $grey-900;
-
+  &-primary {
+    display: inline-block;
+    background: var(--primary);
+    padding: 0.5rem 1rem;
+    line-height: 1.5rem;
     &:hover {
-      background-color: $grey-300-alpha;
+      box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
     }
+  }
 
-    &.btn-primary,
-    &.btn-success {
-      color: $brand-success;
+  &-icon-text {
+    display: inline-block;
+    background: var(--primary);
+    padding: 0.5rem 1rem;
+    line-height: 1.5rem;
 
-      &:hover {
-        background-color: rgba($brand-success, 0.12);
+    svg {
+      height: 1.25rem;
+      width: 1.25rem;
+      fill: var(--white);
+    }
+    &:hover {
+      svg {
+        stroke: var(--border-light);
       }
     }
   }
+  svg {
+    stroke: var(--primary);
+  }
+  &:hover {
+    background: $light-border;
+    color: var(--primary);
+  }
+  &:disabled {
+    pointer-events: none;
+    background: var(--highlight);
+    color: var(--primary);
+  }
 }
+// .btn {
+//   border: none !important;
+//   font-size: 0.875rem;
+//   font-weight: 500;
+//   height: 2.25rem;
+//   line-height: 2.25rem;
+//   min-width: 88px;
+//   padding: 0 0.5rem;
+//   text-transform: uppercase;
+//   border-radius: 0.25rem;
+//   transition: all 0.3s ease-in-out;
+
+//   &:focus,
+//   &.focus {
+//     outline: none !important;
+//   }
+
+//   &:active,
+//   &.active {
+//     box-shadow: none !important;
+//   }
+
+//   &[disabled],
+//   &.disabled,
+//   &:hover[disabled],
+//   &:focus[disabled],
+//   &:active[disabled] {
+//     background: $grey-300-alpha !important;
+//     color: $grey-400-alpha !important;
+
+//     &.btn-flat {
+//       background-color: transparent !important;
+//     }
+//   }
+
+//   &.btn-compact {
+//     padding: 0 8px;
+//   }
+
+//   &.btn-dense {
+//     font-size: 13px;
+//     height: 32px;
+//     line-height: 32px;
+//   }
+
+//   &.btn-tall {
+//     height: 40px;
+//     line-height: 14px;
+//   }
+
+//   &.btn-auto {
+//     min-width: 0;
+//   }
+
+//   &.btn-center {
+//     display: block;
+//     margin: 0 auto;
+//   }
+
+//   &.btn-flat {
+//     background: transparent;
+//     color: $grey-900;
+
+//     &:hover {
+//       background-color: $grey-300-alpha;
+//     }
+
+//     &.btn-primary,
+//     &.btn-success {
+//       color: $brand-success;
+
+//       &:hover {
+//         background-color: rgba($brand-success, 0.12);
+//       }
+//     }
+//   }
+// }

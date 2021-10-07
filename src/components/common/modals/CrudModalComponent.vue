@@ -9,7 +9,11 @@
     <div class="card shadow modal-content">
       <header class="card-header">
         <h4 class="heading">{{ state.heading }}</h4>
-        <button class="btn" @click="closeModal($event)" data-close="true">
+        <button
+          class="btn btn-icon"
+          @click="closeModal($event)"
+          data-close="true"
+        >
           close
         </button>
       </header>
