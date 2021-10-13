@@ -70,11 +70,8 @@ const mouseUpHandler: TvoidFunctionEvent = async (event: any) => {
   --default-width: 17.1875rem;
   $color: rgba(209, 206, 206, 0.863);
   position: relative;
-  padding: 1rem 0.5rem 1rem 1rem;
+  padding: 1rem 0.5rem 1rem 0.5rem;
   width: var(--default-width);
-  -webkit-user-drag: none;
-  -webkit-app-region: no-drag;
-  cursor: default;
 
   .drag-container {
     position: absolute;

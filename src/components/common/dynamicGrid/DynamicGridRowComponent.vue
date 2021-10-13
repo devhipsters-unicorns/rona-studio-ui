@@ -92,7 +92,7 @@ const formatHeader: TFunctionString = (item) => {
   }
   &:hover {
     cursor: pointer;
-    background: $border-light;
+    background: $primary-light;
   }
 }
 

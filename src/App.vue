@@ -23,6 +23,9 @@ import ToolbarComponent from './components/common/toolbar/ToolbarComponent.vue'
   width: inherit;
   display: flex;
   flex-direction: column;
+  -webkit-user-drag: none;
+  -webkit-app-region: no-drag;
+  cursor: default;
 
   #app-main-content {
     flex: 1;

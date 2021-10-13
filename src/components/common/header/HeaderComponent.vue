@@ -1,7 +1,11 @@
 <template>
   <header id="app-header" class="gradient-bg">
     <nav>
-      header
+      <h3 class="logo">
+        <span class="light-text">rona</span>
+        |
+        <span class="bold-text">Studio</span>
+      </h3>
     </nav>
   </header>
 </template>
@@ -10,12 +14,20 @@
 <style lang="scss">
 #app-header {
   height: 4rem;
-  margin-bottom: 0.5rem;
-  background-color: $white;
   > nav {
     padding: $full-padding;
     height: 3.875rem;
-    background-color: $base-bg;
+    background-color: $primary-bg;
+
+    .logo {
+      color: $brand-primary;
+      .light-text {
+        font-weight: normal;
+      }
+      .bold-text {
+        color: $grey-50;
+      }
+    }
   }
 }
 </style>
