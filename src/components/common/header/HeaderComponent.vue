@@ -11,10 +11,11 @@
 #app-header {
   height: 4rem;
   margin-bottom: 0.5rem;
+  background-color: $white;
   > nav {
     padding: $full-padding;
     height: 3.875rem;
-    background-color: var(--base-bg);
+    background-color: $base-bg;
   }
 }
 </style>

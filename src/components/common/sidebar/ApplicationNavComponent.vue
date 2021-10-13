@@ -1,11 +1,11 @@
 <template>
   <nav id="application-nav">
     <router-link :to="{ name: 'dashboard' }">
-      <vue-feather :type="state.icons.hex" size="16"></vue-feather>
+      <vue-feather :type="state.icons.hex" size="20"></vue-feather>
       <span class="menu-item-text">Dashboard</span>
     </router-link>
     <router-link :to="{ name: 'messages' }">
-      <vue-feather :type="state.icons.msg" size="16"></vue-feather>
+      <vue-feather :type="state.icons.msg" size="20"></vue-feather>
       <span class="menu-item-text">Messages</span>
     </router-link>
   </nav>
@@ -26,15 +26,14 @@ const state = reactive({
     display: flex;
     flex-direction: row;
     align-items: center;
-    color: var(--secondary-text);
+    // color: $grey-600;
     text-decoration: none;
     transition: all ease-in-out 0.2s;
     height: 2.625rem;
     padding: 0 1rem;
     position: relative;
     overflow: hidden;
-    border-top-left-radius: 0.1875rem;
-    border-bottom-left-radius: 0.1875rem;
+    border-radius: 0.1875rem;
     margin-bottom: 0.5rem;
 
     .menu-item-text {
@@ -46,9 +45,13 @@ const state = reactive({
       transition: all ease-in-out 0.5s;
     }
 
-    svg {
-      height: 1.25rem;
-      width: 1.25rem;
+    > svg {
+      height: 1.5rem;
+      width: 1.5rem;
+      stroke: red !important;
+      > path {
+        fill: rgb(65, 158, 65) !important;
+      }
     }
     &:after {
       content: '';
@@ -63,27 +66,27 @@ const state = reactive({
       transition: all ease-in-out 0.3s;
     }
     &.router-link-exact-active {
-      background: var(--border-light);
+      background: $border-light;
       .menu-item-text {
-        color: var(--accent);
+        color: $brand-primary;
       }
       svg {
-        stroke: var(--accent);
+        stroke: $brand-primary;
       }
       &:after {
-        background: var(--accent);
+        background: $brand-primary;
         margin-top: -0.416875rem;
         right: 0;
       }
     }
     &:hover {
-      background: var(--border-light);
+      background: $border-light;
       .menu-item-text {
-        color: var(--accent);
+        color: $brand-primary;
       }
       svg {
-        fill: var(--accent);
-        stroke: var(--accent);
+        fill: $brand-primary;
+        stroke: $brand-primary;
       }
     }
   }

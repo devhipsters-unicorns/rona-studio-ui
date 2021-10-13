@@ -2,7 +2,7 @@
   border: none;
   text-transform: uppercase;
   font-weight: bold;
-  color: var(--primary);
+  color: $primary-text;
   border-radius: 0.1875rem;
   transition: all ease-in-out 0.3s;
   background: transparent;
@@ -16,13 +16,13 @@
     svg {
       height: 1.5rem;
       width: 1.5rem;
-      stroke: var(--primary);
+      stroke: $primary-text;
     }
   }
 
   &-primary {
     display: inline-block;
-    background: var(--primary);
+    background: $primary-text;
     padding: 0.5rem 1rem;
     line-height: 1.5rem;
     &:hover {
@@ -32,32 +32,31 @@
 
   &-icon-text {
     display: inline-block;
-    background: var(--primary);
+    background: $primary-text;
     padding: 0.5rem 1rem;
     line-height: 1.5rem;
 
     svg {
       height: 1.25rem;
       width: 1.25rem;
-      fill: var(--white);
     }
     &:hover {
       svg {
-        stroke: var(--border-light);
+        stroke: $border-light;
       }
     }
   }
   svg {
-    stroke: var(--primary);
+    stroke: $primary-text;
   }
   &:hover {
     background: $light-border;
-    color: var(--primary);
+    color: $primary-text;
   }
   &:disabled {
     pointer-events: none;
     background: var(--highlight);
-    color: var(--primary);
+    color: $primary-text;
   }
 }
 // .btn {

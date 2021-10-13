@@ -80,7 +80,7 @@ const formatHeader: TFunctionString = (item) => {
     .grid-cell-inner {
       height: 2.75rem;
       line-height: 2.75rem;
-      background-color: var(--base-bg);
+      background-color: $base-bg;
       padding: 0 $full-padding;
       margin-right: 0.125rem;
     }
@@ -92,7 +92,7 @@ const formatHeader: TFunctionString = (item) => {
   }
   &:hover {
     cursor: pointer;
-    background: var(--border-light);
+    background: $border-light;
   }
 }
 

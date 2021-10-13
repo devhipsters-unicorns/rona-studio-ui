@@ -126,7 +126,7 @@ const removeClone: TvoidFunction = async () => {
 <style lang="scss">
 #split-view {
   height: 100%;
-  background: var(--white);
+  background: $white;
   border-radius: 0.3125rem;
   display: flex;
   position: relative;
@@ -183,7 +183,7 @@ const removeClone: TvoidFunction = async () => {
       border: none;
       background: rgb(199, 213, 253);
       svg {
-        fill: var(--accent);
+        fill: $brand-primary;
         cursor: ew-resize;
       }
     }

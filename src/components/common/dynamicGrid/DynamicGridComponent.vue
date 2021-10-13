@@ -46,7 +46,7 @@ const state: iState = reactive({
   .dynamic-grid-head .dynamic-grid-row {
     width: 100%;
     font-weight: 600;
-    color: var(--primary);
+    color: $primary-text;
     > .dynamic-grid-cell {
       padding: 0 $half-padding;
       text-transform: capitalize;

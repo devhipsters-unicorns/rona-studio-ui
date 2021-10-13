@@ -102,7 +102,7 @@ const closeModal: TFunction = (event) => {
   top: 50%;
   right: 50%;
   bottom: 50%;
-  color: var(--white);
+  color: $white;
   background: transparentize(rgba(#6b717f, 0.9), 0.1);
   z-index: 99;
   transition: all 0.3s ease-in-out;

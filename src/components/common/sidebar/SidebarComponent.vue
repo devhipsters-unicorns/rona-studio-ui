@@ -70,8 +70,11 @@ const mouseUpHandler: TvoidFunctionEvent = async (event: any) => {
   --default-width: 17.1875rem;
   $color: rgba(209, 206, 206, 0.863);
   position: relative;
-  padding: 1rem 1.25rem 1rem 1rem;
+  padding: 1rem 0.5rem 1rem 1rem;
   width: var(--default-width);
+  -webkit-user-drag: none;
+  -webkit-app-region: no-drag;
+  cursor: default;
 
   .drag-container {
     position: absolute;
@@ -90,17 +93,17 @@ const mouseUpHandler: TvoidFunctionEvent = async (event: any) => {
       top: 50%;
       transform: translateY(-50%);
       width: 0.3125rem;
-      background-color: var(--light-highlight);
+      background-color: $primary-light;
       transition: all 0.3s ease-out;
       transform-origin: center center;
     }
 
     &:hover {
       cursor: ew-resize;
-      border-color: var(--light-highlight);
+      border-color: $primary-light;
       .drag-handle {
         height: 3rem;
-        background-color: var(--accent);
+        background-color: $brand-primary;
       }
     }
   }
