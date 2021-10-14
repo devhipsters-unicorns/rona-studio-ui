@@ -58,17 +58,16 @@ const formatHeader: TFunctionString = (item) => {
 const setItemProperty: (item: { [key: string]: any } | any) => String | any = (
   item,
 ) => {
-  let property: string = ''
-
   if (moment(item, moment.ISO_8601, true).isValid()) {
-    property = new Date(item).toDateString()
+    return moment(new Date(item)).format('MMMM d, YYYY')
   }
 
   if (typeof item === 'string') {
-    property = item
+    return item
   }
 
   if (typeof item === 'object') {
+    let property: string = ''
     for (const key in item) {
       if (item.hasOwnProperty(key)) {
         if (typeof item[key] === 'string') {
@@ -76,8 +75,9 @@ const setItemProperty: (item: { [key: string]: any } | any) => String | any = (
         }
       }
     }
+    return property
   }
-  return property
+  return item
 }
 </script>
 
