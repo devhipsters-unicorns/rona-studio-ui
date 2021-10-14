@@ -9,6 +9,7 @@
   "dependencies": {
     "feather-icons": "^4.28.0",
     "mitt": "^3.0.0",
+    "moment": "^2.29.1",
     "vue": "^3.2.16",
     "vue-feather": "^2.0.0-rc",
     "vue-router": "4"

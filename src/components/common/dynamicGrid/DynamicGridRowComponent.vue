@@ -16,12 +16,12 @@
       :key="index"
       :class="state.flag + ` grid-cell grid-cell-` + item"
     >
-      {{ state.store[item] }}
+      {{ setItemProperty(state.store[item]) }}
     </div>
   </div>
 </template>
 <script setup lang="ts">
-import { computed, reactive } from 'vue'
+import { computed, reactive, inject } from 'vue'
 import { TFunctionString } from '../../../types'
 interface iState {
   items: Array<string | number | Date | undefined> | any
@@ -32,6 +32,8 @@ interface iState {
 const props = defineProps({
   dataset: Object || Array,
 })
+
+const moment: any = inject('moment')
 
 const state: iState = reactive({
   items: computed(() => {
@@ -51,6 +53,31 @@ const state: iState = reactive({
 const formatHeader: TFunctionString = (item) => {
   const newString: string = item.replace('_', ' ')
   return newString
+}
+
+const setItemProperty: (item: { [key: string]: any } | any) => String | any = (
+  item,
+) => {
+  let property: string = ''
+
+  if (moment(item, moment.ISO_8601, true).isValid()) {
+    property = new Date(item).toDateString()
+  }
+
+  if (typeof item === 'string') {
+    property = item
+  }
+
+  if (typeof item === 'object') {
+    for (const key in item) {
+      if (item.hasOwnProperty(key)) {
+        if (typeof item[key] === 'string') {
+          property = property + ' ' + item[key]
+        }
+      }
+    }
+  }
+  return property
 }
 </script>
 

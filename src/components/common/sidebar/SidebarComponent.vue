@@ -72,6 +72,7 @@ const mouseUpHandler: TvoidFunctionEvent = async (event: any) => {
   position: relative;
   padding: 1.5rem 0.5rem 1rem 0.5rem;
   width: var(--default-width);
+  will-change: transform;
 
   .drag-container {
     position: absolute;

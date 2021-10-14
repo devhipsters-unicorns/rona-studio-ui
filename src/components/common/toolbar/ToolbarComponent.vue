@@ -7,7 +7,10 @@
       <button class="btn btn-icon" data-action="toggle-properties-panel">
         <vue-feather :type="state.icons.panel" size="16px" />
       </button>
-      <button class="btn btn-icon" data-action="toggle-settings">
+      <button
+        class="btn btn-icon btn-icon-primary"
+        data-action="toggle-settings"
+      >
         <vue-feather :type="state.icons.settings" size="16px" />
       </button>
       <button class="btn btn-icon" data-action="toggle-menu">

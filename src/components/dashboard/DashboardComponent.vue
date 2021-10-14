@@ -15,6 +15,11 @@ const state = reactive({
       status: 'new',
       created_at: '1900-10-06',
       updated_at: '1900-10-06',
+      owner: {
+        id: 1,
+        name: 'Barry',
+        lastname: 'Bonds',
+      },
     },
     {
       id: '2',
@@ -23,6 +28,11 @@ const state = reactive({
       status: 'open',
       created_at: '2021-10-06',
       updated_at: '2021-10-06',
+      owner: {
+        id: 2,
+        name: 'Steven',
+        lastname: 'Jobs',
+      },
     },
     {
       id: '3',
@@ -31,6 +41,11 @@ const state = reactive({
       status: 'inprogress',
       created_at: '2021-09-20',
       updated_at: '2021-10-03',
+      owner: {
+        id: 75,
+        name: 'Frank',
+        lastname: 'White',
+      },
     },
   ],
 })

@@ -4,135 +4,32 @@
   font-weight: bold;
   color: $primary-text;
   border-radius: 0.1875rem;
-  transition: all ease-in-out 0.3s;
   background: transparent;
   cursor: pointer;
+  transition: all ease-in-out 0.3s;
+
+  &[disabled],
+  &.disabled,
+  &:hover[disabled],
+  &:focus[disabled],
+  &:active[disabled] {
+    background: $grey-300-alpha;
+    color: $grey-400-alpha;
+
+    &.btn-flat {
+      background-color: transparent;
+    }
+  }
 
   &-icon {
     width: 2.5rem;
     height: 2.5rem;
     padding: 0;
-
+    color: $primary-text;
     svg {
       height: 1.5rem;
       width: 1.5rem;
       stroke: $primary-text;
     }
   }
-
-  &-primary {
-    display: inline-block;
-    background: $primary-text;
-    padding: 0.5rem 1rem;
-    line-height: 1.5rem;
-    &:hover {
-      box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
-    }
-  }
-
-  &-icon-text {
-    display: inline-block;
-    background: $primary-text;
-    padding: 0.5rem 1rem;
-    line-height: 1.5rem;
-
-    svg {
-      height: 1.25rem;
-      width: 1.25rem;
-    }
-    &:hover {
-      svg {
-        stroke: $border-light;
-      }
-    }
-  }
-  svg {
-    stroke: $primary-text;
-  }
-  &:hover {
-    background: $light-border;
-    color: $primary-text;
-  }
-  &:disabled {
-    pointer-events: none;
-    background: var(--highlight);
-    color: $primary-text;
-  }
 }
-// .btn {
-//   border: none !important;
-//   font-size: 0.875rem;
-//   font-weight: 500;
-//   height: 2.25rem;
-//   line-height: 2.25rem;
-//   min-width: 88px;
-//   padding: 0 0.5rem;
-//   text-transform: uppercase;
-//   border-radius: 0.25rem;
-//   transition: all 0.3s ease-in-out;
-
-//   &:focus,
-//   &.focus {
-//     outline: none !important;
-//   }
-
-//   &:active,
-//   &.active {
-//     box-shadow: none !important;
-//   }
-
-//   &[disabled],
-//   &.disabled,
-//   &:hover[disabled],
-//   &:focus[disabled],
-//   &:active[disabled] {
-//     background: $grey-300-alpha !important;
-//     color: $grey-400-alpha !important;
-
-//     &.btn-flat {
-//       background-color: transparent !important;
-//     }
-//   }
-
-//   &.btn-compact {
-//     padding: 0 8px;
-//   }
-
-//   &.btn-dense {
-//     font-size: 13px;
-//     height: 32px;
-//     line-height: 32px;
-//   }
-
-//   &.btn-tall {
-//     height: 40px;
-//     line-height: 14px;
-//   }
-
-//   &.btn-auto {
-//     min-width: 0;
-//   }
-
-//   &.btn-center {
-//     display: block;
-//     margin: 0 auto;
-//   }
-
-//   &.btn-flat {
-//     background: transparent;
-//     color: $grey-900;
-
-//     &:hover {
-//       background-color: $grey-300-alpha;
-//     }
-
-//     &.btn-primary,
-//     &.btn-success {
-//       color: $brand-success;
-
-//       &:hover {
-//         background-color: rgba($brand-success, 0.12);
-//       }
-//     }
-//   }
-// }

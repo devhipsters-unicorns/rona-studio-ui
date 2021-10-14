@@ -1,7 +1,7 @@
 <template>
   <div id="app-dynamic-grid" class="flex flex-col">
     <div class="dynamic-grid-head">
-      <dynamic-grid-row-component :dataset="state.defaultHeader" />
+      <dynamic-grid-row-component :dataset="state.defaultHeaders" />
     </div>
     <div class="dynamic-grid-body">
       <div class="grid-row-container">
@@ -22,18 +22,31 @@ import DynamicGridRowComponent from './DynamicGridRowComponent.vue'
 
 interface iState {
   dataset: Object | any
-  defaultHeader: Array<string | number> | undefined
+  defaultHeaders?: Array<string | number> | [] | any
 }
 
 const props = defineProps({
   dataset: Object,
 })
 
+const buildHeaders = (
+  dataset: Array<Object | string | number | boolean | unknown> | any,
+) => {
+  if (!dataset) return
+  const headers: string[] = []
+  const item = dataset[0]
+  for (const key in item) {
+    if (item.hasOwnProperty(key)) {
+      headers.push(key)
+    }
+  }
+  return headers
+}
+
 const state: iState = reactive({
   dataset: props.dataset,
-  defaultHeader: computed(() => {
-    if (!props.dataset) return []
-    return Object.keys(props.dataset[0])
+  defaultHeaders: computed(() => {
+    return buildHeaders(props?.dataset)
   }),
 })
 </script>
