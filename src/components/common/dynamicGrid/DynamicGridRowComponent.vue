@@ -1,7 +1,7 @@
 <template>
   <div class="dynamic-grid-row flex flex-row" v-if="state.flag == 'head'">
     <div
-      v-for="(item, index) in state.store"
+      v-for="(item, index) in state.dataset"
       :key="index"
       :class="state.flag + ` gradient-bg-up grid-cell grid-cell-` + item"
     >
@@ -16,7 +16,7 @@
       :key="index"
       :class="state.flag + ` grid-cell grid-cell-` + item"
     >
-      {{ setItemProperty(state.store[item]) }}
+      {{ setItemProperty(state.dataset[item]) }}
     </div>
   </div>
 </template>
@@ -25,7 +25,7 @@ import { computed, reactive, inject } from 'vue'
 import { TFunctionString } from '../../../types'
 interface iState {
   items: Array<string | number | Date | undefined> | any
-  store: { [key: string]: string | number | Date } | Array<string> | any
+  dataset: { [key: string]: string | number | Date } | Array<string> | any
   flag: string
 }
 
@@ -42,7 +42,7 @@ const state: iState = reactive({
         Object.keys(props.dataset)
       : props.dataset
   }),
-  store: computed(() => {
+  dataset: computed(() => {
     return props.dataset
   }),
   flag: computed(() => {
@@ -59,7 +59,7 @@ const setItemProperty: (item: { [key: string]: any } | any) => String | any = (
   item,
 ) => {
   if (moment(item, moment.ISO_8601, true).isValid()) {
-    return moment(new Date(item)).format('MMMM d, YYYY')
+    return moment(new Date(item)).format('D MMM YYYY')
   }
 
   if (typeof item === 'string') {

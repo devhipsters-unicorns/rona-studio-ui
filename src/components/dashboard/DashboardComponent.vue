@@ -13,9 +13,9 @@ const state = reactive({
       title: 'James Bond Website',
       description: 'Website 1',
       status: 'new',
-      created_at: '1900-10-06',
-      updated_at: '1900-10-06',
-      owner: {
+      created_at: '2021-10-06',
+      updated_at: '2021-10-09',
+      created_by: {
         id: 1,
         name: 'Barry',
         lastname: 'Bonds',
@@ -28,7 +28,7 @@ const state = reactive({
       status: 'open',
       created_at: '2021-10-06',
       updated_at: '2021-10-06',
-      owner: {
+      created_by: {
         id: 2,
         name: 'Steven',
         lastname: 'Jobs',
@@ -40,8 +40,8 @@ const state = reactive({
       description: 'Social Media Campaign',
       status: 'inprogress',
       created_at: '2021-09-20',
-      updated_at: '2021-10-03',
-      owner: {
+      updated_at: '2021-10-12',
+      created_by: {
         id: 75,
         name: 'Frank',
         lastname: 'White',
