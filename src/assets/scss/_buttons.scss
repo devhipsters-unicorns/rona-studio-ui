@@ -1,0 +1,35 @@
+.btn {
+  border: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: $primary-text;
+  border-radius: 0.1875rem;
+  background: transparent;
+  cursor: pointer;
+  transition: all ease-in-out 0.3s;
+
+  &[disabled],
+  &.disabled,
+  &:hover[disabled],
+  &:focus[disabled],
+  &:active[disabled] {
+    background: $grey-300-alpha;
+    color: $grey-400-alpha;
+
+    &.btn-flat {
+      background-color: transparent;
+    }
+  }
+
+  &-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0;
+    color: $primary-text;
+    svg {
+      height: 1.5rem;
+      width: 1.5rem;
+      stroke: $primary-text;
+    }
+  }
+}
