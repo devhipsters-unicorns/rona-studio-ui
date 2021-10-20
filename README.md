@@ -1,6 +1,6 @@
 # rona-studio-ui
 
-yarona-studio-ui
+yarona-studio
 
 # Vue 3 + Typescript + Vite
 
