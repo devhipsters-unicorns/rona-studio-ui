@@ -1,5 +1,5 @@
 <template>
-  <header id="app-header" class="gradient-bg">
+  <header id="app-header">
     <nav>
       <h3 class="logo">
         <span class="light-text">rona</span>
@@ -16,7 +16,7 @@
   height: 4rem;
   > nav {
     padding: $full-padding;
-    height: 3.875rem;
+    height: 100%;
 
     .logo {
       color: $brand-primary;
