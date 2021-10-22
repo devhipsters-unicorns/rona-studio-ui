@@ -16,6 +16,7 @@
   height: 4rem;
   > nav {
     padding: $full-padding;
+    border-bottom: 0.0625rem solid $border-light;
     height: 100%;
 
     .logo {
