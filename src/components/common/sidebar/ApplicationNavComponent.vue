@@ -75,7 +75,7 @@ const state = reactive({
   }
   a:hover {
     color: $brand-primary;
-    background: transparentize($border-light, 0.3);
+    background: transparentize($border-light, 0.45);
     &:after {
       background: $brand-primary;
       margin-top: -0.416875rem;
