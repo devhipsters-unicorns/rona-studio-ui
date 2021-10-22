@@ -17,7 +17,6 @@
   > nav {
     padding: $full-padding;
     height: 3.875rem;
-    background-color: $primary-bg;
 
     .logo {
       color: $brand-primary;
