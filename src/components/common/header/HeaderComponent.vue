@@ -25,7 +25,7 @@
         font-weight: normal;
       }
       .bold-text {
-        color: $grey-50;
+        color: $primary-text;
       }
     }
   }
