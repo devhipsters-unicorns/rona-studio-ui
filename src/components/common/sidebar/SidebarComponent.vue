@@ -91,7 +91,7 @@ const mouseUpHandler: TvoidFunctionEvent = async (event: any) => {
       top: 50%;
       transform: translateY(-50%);
       width: 0.3125rem;
-      background-color: $primary-light;
+      background-color: $brand-primary;
       transition: all 0.3s ease-out;
       transform-origin: center center;
     }
