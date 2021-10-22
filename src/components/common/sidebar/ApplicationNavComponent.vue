@@ -37,7 +37,7 @@ const state = reactive({
     &.router-link-active,
     &.router-link-exact-active {
       color: $brand-primary;
-      background: transparentize($border-light, 0.1);
+      background: transparentize($border-light, 0.7);
       svg {
         stroke: $brand-primary;
         fill: $brand-primary !important;
@@ -75,7 +75,7 @@ const state = reactive({
   }
   a:hover {
     color: $brand-primary;
-    background: transparentize($border-light, 0.9);
+    background: transparentize($border-light, 0.7);
     &:after {
       background: $brand-primary;
       margin-top: -0.416875rem;
