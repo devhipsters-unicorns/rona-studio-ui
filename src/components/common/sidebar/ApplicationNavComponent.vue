@@ -37,7 +37,7 @@ const state = reactive({
     &.router-link-active,
     &.router-link-exact-active {
       color: $brand-primary;
-      background: $primary-accent;
+      background: $border-light;
       svg {
         stroke: $brand-primary;
         fill: $brand-primary !important;
