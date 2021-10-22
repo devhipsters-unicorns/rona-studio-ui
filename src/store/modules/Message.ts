@@ -1,8 +1,8 @@
-const user = {
+const message = {
   state: () => ({}),
   getters: {},
   mutations: {},
   actions: {},
 }
 
-export default user
+export default message
