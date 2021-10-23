@@ -1,26 +1,58 @@
 <template>
   <nav id="application-nav">
-    <router-link :to="{ name: 'dashboard' }">
-      <vue-feather :type="state.icons.hex" size="20"></vue-feather>
-      <span class="menu-item-text">Dashboard</span>
-    </router-link>
-    <router-link :to="{ name: 'messages' }">
-      <vue-feather :type="state.icons.msg" size="20"></vue-feather>
-      <span class="menu-item-text">Messages</span>
-    </router-link>
+    <div class="link-container">
+      <router-link :to="{ name: 'dashboard' }">
+        <vue-feather :type="state.icons.hex" size="20"></vue-feather>
+        <span class="menu-item-text">Dashboard</span>
+      </router-link>
+      <router-link :to="{ name: 'messages' }">
+        <vue-feather :type="state.icons.msg" size="20"></vue-feather>
+        <span class="menu-item-text">Messages</span>
+      </router-link>
+    </div>
+    <div class="nav-footer colophon">
+      <small>
+        <span>
+          &#169;
+          <a href="https://www.devhipsters.co">Devhipsters</a>
+          {{ state.legal }}.
+        </span>
+        <br />
+        <span>rona Studio system v.1.0</span>
+      </small>
+    </div>
   </nav>
 </template>
 <script setup lang="ts">
-import { reactive } from 'vue'
+import { computed, reactive } from 'vue'
 const state = reactive({
   icons: {
     hex: 'hexagon',
     msg: 'message-square',
   },
+  legal: computed(() => {
+    const year = new Date().getFullYear()
+    return year
+  }),
 })
 </script>
 <style lang="scss" scoped>
 #application-nav {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  height: 100%;
+  .link-container {
+    flex: 1;
+    border-bottom: 1px solid $border-light;
+  }
+  .nav-footer {
+    padding: 0.5rem;
+    a {
+      display: inline;
+      padding: 0;
+    }
+  }
   a {
     display: flex;
     flex-direction: row;
