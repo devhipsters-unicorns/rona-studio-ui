@@ -53,7 +53,7 @@ const state = reactive({
       padding: 0;
     }
   }
-  a {
+  .link-container a {
     display: flex;
     flex-direction: row;
     align-items: center;
