@@ -1,5 +1,5 @@
 import VueRouter, { createRouter, createWebHistory } from 'vue-router'
-import DashboardComponent from '../components/dashboard/DashboardComponent.vue'
+import DashboardComponent from '../components/dashboards/DashboardComponent.vue'
 import MessagesComponent from '../components/messages/MessagesComponent.vue'
 
 const routes: Array<any> = [
