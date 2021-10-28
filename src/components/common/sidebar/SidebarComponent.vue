@@ -52,7 +52,7 @@ const mouseMoveHandler: TvoidFunctionEvent = async (event: any) => {
   if (!state.dragStarted) return
   const newWidth: number = state.rects?.x + event.clientX
   if (newWidth <= 180) return
-  window.requestAnimationFrame(() => {
+  requestAnimationFrame(() => {
     appSidebar.value?.style?.setProperty('--default-width', `${newWidth}px`)
   })
 }
@@ -78,13 +78,21 @@ const mouseUpHandler: TvoidFunctionEvent = async (event: any) => {
     position: absolute;
     top: 0.5rem;
     bottom: 0.5rem;
-    width: 2rem;
-    right: -2rem;
-    border-left: 0.125rem solid $border-light;
+    width: 0.0313rem;
+    right: -3rem;
+
+    &:after {
+      content: ' ';
+      width: 1px;
+      background-color: $border-light;
+      height: 100%;
+      position: absolute;
+      right: 2.89125rem;
+    }
 
     .drag-handle {
-      position: inherit;
-      right: 1.785rem;
+      position: absolute;
+      right: 2.75rem;
       content: ' ';
       height: 1.5rem;
       border-radius: 0.1875rem;
@@ -99,6 +107,10 @@ const mouseUpHandler: TvoidFunctionEvent = async (event: any) => {
     &:hover {
       cursor: ew-resize;
       border-color: $primary-light;
+      width: 6rem;
+      &:after {
+        background-color: $primary-light;
+      }
       .drag-handle {
         height: 3rem;
         background-color: $brand-primary;
