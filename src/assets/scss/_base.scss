@@ -28,7 +28,7 @@ body {
   font-family: 'Oxygen-Sans', Segoe UI, Roboto, Helvetica Neue, Helvetica, Arial,
     sans-serif;
   color: $grey-600;
-  background: $base-bg;
+  background: $primary-bg;
 }
 
 .card {
@@ -67,10 +67,17 @@ body {
     rgba(117, 116, 116, 0.275) 100%
   );
 }
-
 .input-group {
-  width: 100%;
   height: 2.5rem;
+}
+
+.input-msg-group {
+  min-height: 2rem;
+}
+
+.input-group,
+.input-msg-group {
+  width: 100%;
   > label {
     display: inline-block;
     margin-bottom: 0.5rem;
@@ -84,6 +91,18 @@ body {
     width: 100%;
     padding: 0 0.5rem;
     border-radius: 0.3125rem;
+    background: transparentize($border-light, 0.125);
+    &:focus {
+      outline-color: $brand-primary;
+    }
+  }
+  > textarea {
+    border: none;
+    height: 100%;
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.3125rem;
+    resize: none;
     background: transparentize($border-light, 0.125);
     &:focus {
       outline-color: $brand-primary;

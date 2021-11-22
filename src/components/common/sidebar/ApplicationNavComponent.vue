@@ -42,6 +42,7 @@ const state = reactive({
   position: relative;
   flex-direction: column;
   height: 100%;
+  margin-top: 1rem;
   .link-container {
     flex: 1;
     border-bottom: 1px solid $border-light;

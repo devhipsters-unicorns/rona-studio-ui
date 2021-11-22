@@ -13,8 +13,7 @@
 <script setup lang="ts"></script>
 <style lang="scss">
 #app-header {
-  background-color: $white;
-  height: 4rem;
+  height: 3.375rem;
   > nav {
     padding: $full-padding;
     border-bottom: 0.0625rem solid $border-light;

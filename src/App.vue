@@ -1,5 +1,5 @@
 <template>
-  <HeaderComponent />
+  <!-- <HeaderComponent /> -->
   <main id="app-main-content">
     <SidebarComponent />
     <div class="main-content-wrapper flex flex-col">
@@ -11,7 +11,7 @@
 </template>
 
 <script setup lang="ts">
-import HeaderComponent from './components/common/header/HeaderComponent.vue'
+// import HeaderComponent from './components/common/header/HeaderComponent.vue'
 import CrudModalComponent from './components/common/modals/CrudModalComponent.vue'
 import SidebarComponent from './components/common/sidebar/SidebarComponent.vue'
 import ToolbarComponent from './components/common/toolbar/ToolbarComponent.vue'
@@ -35,10 +35,10 @@ import ToolbarComponent from './components/common/toolbar/ToolbarComponent.vue'
     display: flex;
     flex-direction: row;
     .main-content-wrapper {
-      padding: 1rem 1.5rem;
       flex: 1;
       .page {
         flex: 1;
+        padding: 1rem;
       }
     }
   }

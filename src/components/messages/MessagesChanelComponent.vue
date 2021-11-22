@@ -42,7 +42,8 @@ function computed(arg0: () => void): any {
 <style lang="scss">
 #chanel-aside {
   width: 15.625rem;
-  padding: 0 0 1rem 1rem;
+  padding: 1rem;
   border-left: 1px solid $primary-light;
+  background-color: $white;
 }
 </style>

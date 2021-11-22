@@ -6,6 +6,7 @@
     @mousemove="mouseMoveHandler($event)"
     @mouseup="mouseUpHandler($event)"
   >
+    <SidebarHeaderComponent />
     <div class="drag-container">
       <span class="drag-handle"></span>
     </div>
@@ -17,6 +18,7 @@
 import { reactive, Ref, ref } from 'vue'
 import { TvoidFunction, TvoidFunctionEvent } from '../../../types'
 import ApplicationNavComponent from './ApplicationNavComponent.vue'
+import SidebarHeaderComponent from './SidebarHeaderComponent.vue'
 
 interface iState {
   dragStarted: boolean | undefined
@@ -70,9 +72,10 @@ const mouseUpHandler: TvoidFunctionEvent = async (event: any) => {
   --default-width: 17.1875rem;
   $color: rgba(209, 206, 206, 0.863);
   position: relative;
-  padding: 1.5rem 0.5rem 1rem 0.5rem;
+  padding: 0rem 0.5rem 1rem 0.5rem;
   width: var(--default-width);
   will-change: transform;
+  background-color: $white;
 
   .drag-container {
     position: absolute;

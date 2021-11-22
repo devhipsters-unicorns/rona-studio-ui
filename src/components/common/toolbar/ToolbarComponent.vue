@@ -43,6 +43,8 @@ const state: iState = reactive({
 <style lang="scss" scoped>
 #app-toolbar {
   height: 3.375rem;
-  margin-bottom: 1rem;
+  border-bottom: 0.0625rem solid $border-light;
+  background-color: $white;
+  padding: 0 1rem;
 }
 </style>
